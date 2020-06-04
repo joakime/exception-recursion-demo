@@ -1,10 +1,15 @@
-package org.example;
+package org.eclipse.jetty.demo;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
 public class RecursionTest
 {
+    static
+    {
+        RecursiveThrowableFixTurboFilter.init();
+    }
+
     @Test
     public void testCauseRecursion()
     {
